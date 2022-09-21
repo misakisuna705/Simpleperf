@@ -2,14 +2,19 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [命令](#命令)
+* [command](#command)
+* [issue](#issue)
 
 <!-- vim-markdown-toc -->
 
 ---
 
-## 命令
+## command
 
 ```zsh
 simpleperf list
 ```
+
+## issue
+
+-   [SimplePerf: Difference between Hardware events and raw events?](https://github.com/android/ndk/issues/550)
