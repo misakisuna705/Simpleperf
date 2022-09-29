@@ -15,6 +15,7 @@
 * [app_profiler.py](#app_profilerpy)
     - [record](#record-1)
         + [task](#task-1)
+        + [cpu](#cpu-1)
     - [report](#report)
 * [issue](#issue)
 
@@ -89,6 +90,13 @@ simpleperf --help
 #### task
 
 -   -p xxx.xxx.xxx.xxx # ???
+
+#### cpu
+
+-   --trace-offcpu on-cpu # ???
+-   --trace-offcpu off-cpu # ???
+-   --trace-offcpu on-off-cpu # ???
+-   --trace-offcpu mixed-on-off-cpu # ???
 
 ### report
 
