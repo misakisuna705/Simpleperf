@@ -10,6 +10,7 @@
         + [time](#time)
         + [event](#event)
     - [record](#record)
+        + [rate](#rate)
 * [app_profiler.py](#app_profilerpy)
     - [record](#record-1)
     - [report](#report)
@@ -75,11 +76,15 @@ List of software events:
 
 ### record
 
-```zsh
-simpleperf record --help
-```
-
+-   --help
 -   --use-devfreq-counters
+-   simpelperf record [task] [core] [time] [event] [rate] [ouput]
+
+#### rate
+
+-   -f [records/second]
+-   -c [records]
+-   --cpu-percent [max percents]
 
 ## app_profiler.py
 
