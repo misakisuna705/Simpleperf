@@ -6,8 +6,9 @@
     - [list](#list)
     - [stat](#stat)
         + [task](#task)
-        + [event](#event)
+        + [core](#core)
         + [time](#time)
+        + [event](#event)
     - [record](#record)
 * [app_profiler.py](#app_profilerpy)
     - [record](#record-1)
@@ -44,31 +45,33 @@ List of software events:
 
 ### stat
 
-```zsh
-simpleperf stat --print-hw-counter
-```
+-   --print-hw-counter
+-   simpelperf stat [task] [core] [time] [event]
 
 #### task
 
-```zsh
-simpleperf stat -a
-simpleperf stat [executable]
-simpleperf --app [xxx.xxx.xxx]
-simpleperf stat -p [pid, pid, pid, ...]
-simpleperf stat -p [pid, pid, pid, ...] --per-thread
-simpleperf stat -p [pid, pid, pid, ...] --per-thread --no-inherit
-simpleperf stat -t [tid, tid, tid, ...]
-```
+-   -a
+-   [executable]
+-   --app [xxx.xxx.xxx] # ???
+-   -p [pid, pid, pid, ...]
+-   -p [pid, pid, pid, ...] --per-thread
+-   -p [pid, pid, pid, ...] --per-thread --no-inherit
+-   -t [tid, tid, tid, ...]
 
-#### event
+#### core
 
--   -e [event, event, event, ...]
--   --group [event, event, event, ...]
+-   --per-core
 
 #### time
 
 -   --duration [seconds]
 -   --interval [milliseconds]
+-   --interval-only-values #???
+
+#### event
+
+-   -e [event, event, event, ...]
+-   --group [event, event, event, ...]
 
 ### record
 
@@ -76,9 +79,7 @@ simpleperf stat -t [tid, tid, tid, ...]
 simpleperf record --help
 ```
 
-```zsh
-simpleperf record --use-devfreq-counters
-```
+-   --use-devfreq-counters
 
 ## app_profiler.py
 
