@@ -12,11 +12,15 @@
     - [record](#record)
         + [rate](#rate)
         + [output](#output)
+    - [report](#report)
+        + [input](#input)
+        + [parser](#parser)
+        + [filter](#filter)
 * [app_profiler.py](#app_profilerpy)
     - [record](#record-1)
         + [task](#task-1)
         + [cpu](#cpu-1)
-    - [report](#report)
+    - [report](#report-1)
 * [issue](#issue)
 
 <!-- vim-markdown-toc -->
@@ -80,6 +84,25 @@ simpleperf --help
 #### output
 
 -   -o [path]
+
+### report
+
+-   -n # ???
+
+#### input
+
+-   -i [path]
+
+#### parser
+
+-   --sort [comm,pid,tid,symbol]
+
+#### filter
+
+-   --comms [executable, executable, ...]
+-   --pids [pid, pid, ...]
+-   --tids [tid, tid, ...]
+-   --dsos [lib.so, lib.so, ...]
 
 ## app_profiler.py
 
