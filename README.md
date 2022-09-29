@@ -6,13 +6,15 @@
     - [list](#list)
     - [stat](#stat)
         + [task](#task)
-        + [core](#core)
+        + [cpu](#cpu)
         + [time](#time)
         + [event](#event)
     - [record](#record)
         + [rate](#rate)
+        + [output](#output)
 * [app_profiler.py](#app_profilerpy)
     - [record](#record-1)
+        + [task](#task-1)
     - [report](#report)
 * [issue](#issue)
 
@@ -28,26 +30,13 @@ simpleperf --help
 
 ### list
 
-```zsh
-simpleperf list
-
-List of hw-cache events:
-  branch-loads
-  ...
-List of hardware events:
-  cpu-cycles
-  instructions
-  ...
-List of software events:
-  cpu-clock
-  task-clock
-  ...
-```
+-   --show-features # ???
+-   simpleperf list
 
 ### stat
 
 -   --print-hw-counter
--   simpelperf stat [task] [core] [time] [event]
+-   simpelperf stat [task] [cpu] [time] [event]
 
 #### task
 
@@ -59,15 +48,16 @@ List of software events:
 -   -p [pid, pid, pid, ...] --per-thread --no-inherit
 -   -t [tid, tid, tid, ...]
 
-#### core
+#### cpu
 
+-   --trace-offcpu # ???
 -   --per-core
 
 #### time
 
 -   --duration [seconds]
 -   --interval [milliseconds]
--   --interval-only-values #???
+-   --interval-only-values # ???
 
 #### event
 
@@ -78,7 +68,7 @@ List of software events:
 
 -   --help
 -   --use-devfreq-counters
--   simpelperf record [task] [core] [time] [event] [rate] [ouput]
+-   simpelperf record [task] [cpu] [time] [event] [rate] [ouput]
 
 #### rate
 
@@ -86,13 +76,19 @@ List of software events:
 -   -c [records]
 -   --cpu-percent [max percents]
 
+#### output
+
+-   -o [path]
+
 ## app_profiler.py
 
 ### record
 
-```zsh
-app_profiler.py -r "--xxx --xxx" # simpleperf record "--xxx --xxx"
-```
+-   app_profiler.py -r "--xxx --xxx" # simpleperf record "--xxx --xxx"
+
+#### task
+
+-   -p xxx.xxx.xxx.xxx # ???
 
 ### report
 
