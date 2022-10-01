@@ -2,7 +2,7 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [simpleperf](#simpleperf)
+* [bin](#bin)
     - [list](#list)
     - [stat](#stat)
         + [task](#task)
@@ -16,18 +16,20 @@
         + [input](#input)
         + [parser](#parser)
         + [filter](#filter)
-* [app_profiler.py](#app_profilerpy)
+* [script](#script)
     - [record](#record-1)
-        + [task](#task-1)
-        + [cpu](#cpu-1)
+        + [app_profiler.py](#app_profilerpy)
+        + [run_simpleperf_on_device.py](#run_simpleperf_on_devicepy)
     - [report](#report-1)
+    - [report.py](#reportpy)
+    - [report_html.py](#report_htmlpy)
 * [issue](#issue)
 
 <!-- vim-markdown-toc -->
 
 ---
 
-## simpleperf
+## bin
 
 ```zsh
 simpleperf --help
@@ -41,7 +43,7 @@ simpleperf --help
 ### stat
 
 -   --print-hw-counter
--   simpelperf stat [task] [cpu] [time] [event]
+-   simpleperf stat [task] [cpu] [time] [event]
 
 #### task
 
@@ -73,7 +75,7 @@ simpleperf --help
 
 -   --help
 -   --use-devfreq-counters
--   simpelperf record [task] [cpu] [time] [event] [rate] [ouput]
+-   simpleperf record [task] [cpu] [time] [event] [rate] [ouput]
 
 #### rate
 
@@ -104,24 +106,34 @@ simpleperf --help
 -   --tids [tid, tid, ...]
 -   --dsos [lib.so, lib.so, ...]
 
-## app_profiler.py
+## script
 
 ### record
 
--   app_profiler.py -r "--xxx --xxx" # simpleperf record "--xxx --xxx"
+#### app_profiler.py
 
-#### task
+-   ./app_profiler.py # simpleperf record
+-   ./app_profiler.py -r "--xxx --xxx" # simpleperf record "--xxx --xxx"
 
--   -p xxx.xxx.xxx.xxx # ???
-
-#### cpu
+-   ./app_profiler.py -cmd [executable] # simpleperf record [executable]
+-   ./app_profiler.py -p xxx.xxx.xxx # simpleperf record --app
+-   ./app_profiler.py -np [process name]
+-   ./app_profiler.py --pid [pid] # simpleperf record -p
 
 -   --trace-offcpu on-cpu # ???
 -   --trace-offcpu off-cpu # ???
 -   --trace-offcpu on-off-cpu # ???
 -   --trace-offcpu mixed-on-off-cpu # ???
 
+#### run_simpleperf_on_device.py
+
 ### report
+
+### report.py
+
+-   ./report.py # simpleperf report
+
+### report_html.py
 
 ## issue
 
