@@ -32,17 +32,23 @@
 ## bin
 
 ```zsh
-simpleperf --help
+simpleperf -h
 ```
 
 ### list
 
--   --show-features # ???
--   simpleperf list
+-   simpleperf help list
+
+```zsh
+simpleperf list
+simpleperf list pmu
+simpleperf list raw
+```
 
 ### stat
 
--   --print-hw-counter
+-   simpleperf help stat
+
 -   simpleperf stat [task] [cpu] [time] [event]
 
 #### task
@@ -52,8 +58,8 @@ simpleperf --help
 -   --app [xxx.xxx.xxx] # ???
 -   -p [pid, pid, pid, ...]
 -   -p [pid, pid, pid, ...] --per-thread
--   -p [pid, pid, pid, ...] --per-thread --no-inherit
--   -t [tid, tid, tid, ...]
+-   -p [pid, pid, pid, ...] --no-inherit
+-   -t [tid, tid, tid, ...] --no-inherit
 
 #### cpu
 
@@ -64,7 +70,6 @@ simpleperf --help
 
 -   --duration [seconds]
 -   --interval [milliseconds]
--   --interval-only-values # ???
 
 #### event
 
@@ -97,7 +102,7 @@ simpleperf --help
 
 #### parser
 
--   --sort [comm,pid,tid,symbol]
+-   --sort [pid,comm,tid,cpu,count]
 
 #### filter
 
