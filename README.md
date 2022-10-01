@@ -9,18 +9,18 @@
         + [cpu](#cpu)
         + [time](#time)
         + [event](#event)
-    - [record](#record)
+    - [record ???](#record-)
         + [rate](#rate)
         + [output](#output)
-    - [report](#report)
+    - [report ???](#report-)
         + [input](#input)
         + [parser](#parser)
         + [filter](#filter)
-* [script](#script)
-    - [record](#record-1)
+* [script ???](#script-)
+    - [record](#record)
         + [app_profiler.py](#app_profilerpy)
         + [run_simpleperf_on_device.py](#run_simpleperf_on_devicepy)
-    - [report](#report-1)
+    - [report](#report)
     - [report.py](#reportpy)
     - [report_html.py](#report_htmlpy)
 * [issue](#issue)
@@ -48,7 +48,6 @@ simpleperf list raw
 ### stat
 
 -   simpleperf help stat
-
 -   simpleperf stat [task] [cpu] [time] [event]
 
 #### task
@@ -73,14 +72,14 @@ simpleperf list raw
 
 #### event
 
+-   --use-devfreq-counters
 -   -e [event, event, event, ...]
 -   --group [event, event, event, ...]
 
-### record
+### record ???
 
--   --help
--   --use-devfreq-counters
--   simpleperf record [task] [cpu] [time] [event] [rate] [ouput]
+-   simpleperf help record
+-   simpleperf record [task] [cpu] [time] [event] [rate] [ouput] # ???
 
 #### rate
 
@@ -92,7 +91,7 @@ simpleperf list raw
 
 -   -o [path]
 
-### report
+### report ???
 
 -   -n # ???
 
@@ -111,7 +110,7 @@ simpleperf list raw
 -   --tids [tid, tid, ...]
 -   --dsos [lib.so, lib.so, ...]
 
-## script
+## script ???
 
 ### record
 
